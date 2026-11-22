@@ -40,10 +40,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .top-inner { display: flex; align-items: center; gap: 2rem; min-height: 4.4rem; }
 .wordmark { font-family: var(--serif); font-size: 1.16rem; color: var(--heading); text-decoration: none; white-space: nowrap; }
 .main-nav, .preferences { display: flex; align-items: center; gap: 1.25rem; }
-.main-nav { margin-inline-start: auto; }
+.main-nav { margin-inline-start: auto; flex-wrap: wrap; }
 .main-nav a { font-size: .875rem; color: var(--muted); text-decoration: none; }
 .main-nav a:hover { text-decoration: underline; }
-.preferences { gap: .55rem; }
+.preferences { gap: .55rem; flex-shrink: 0; }
 .language { display: flex; align-items: center; padding: .15rem; border: 1px solid var(--line); border-radius: .45rem; }
 .language button { background: transparent; border: 0; border-radius: .3rem; min-width: 2.25rem; min-height: 2rem; color: var(--muted); font-size: .875rem; font-weight: 550; }
 .language button[aria-pressed="true"], .language button:hover { background: var(--wash); color: var(--accent); }
@@ -87,9 +87,10 @@ p { margin: 0 0 .8rem; }
 .projects a { font-weight: 650; }
 .projects span, .records dd span { display: block; }
 .records { margin: 0; }
-.records div { display: grid; grid-template-columns: minmax(7.5rem, max-content) 1fr; gap: .8rem; margin-bottom: .85rem; }
+.records div { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: .8rem; margin-bottom: 1rem; }
 .records dt { color: var(--muted); font-size: .9rem; }
 .records dd { margin: 0; }
+.degree-thesis { margin: .55rem 0 0; }
 footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: .6rem; padding-top: 1rem; color: var(--muted); font-size: .875rem; }
 @media (max-width: 56rem) {
   .top-inner, .wrapper { padding-inline: 1.5rem; }
