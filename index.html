@@ -11,14 +11,13 @@
       if (localStorage.getItem('academic-theme') === 'dark') document.documentElement.dataset.theme = 'dark';
     } catch {}
   </script>
-  <link rel="stylesheet" href="./assets/site.css">
-  <script src="./assets/site.js" defer></script>
+  <link rel="stylesheet" href="./assets/site.css?v=2">
+  <script src="./assets/site.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip" href="#main" data-copy="skip">Skip to content</a>
   <header class="topbar">
     <div class="top-inner">
-      <a class="wordmark" href="./">Trong Cuong Tran</a>
       <nav class="main-nav" aria-label="Main navigation" data-label="nav">
         <a href="#publications" data-copy="publications">Publications</a>
         <a href="#projects" data-copy="projects">Projects</a>
@@ -26,13 +25,15 @@
         <a href="#awards" data-copy="awards">Honours &amp; Awards</a>
       </nav>
       <div class="preferences">
-        <div class="language" role="group" aria-label="Language" data-label="language">
-          <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-          <button type="button" data-lang="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="false">VI</button>
-          <button type="button" data-lang="zh-Hans" lang="zh-Hans" aria-label="简体中文" aria-pressed="false">中文</button>
+        <div class="language">
+          <select id="site-language" aria-label="Language" data-label="language">
+            <option value="en" lang="en">English</option>
+            <option value="vi" lang="vi">Tiếng Việt</option>
+            <option value="zh-Hans" lang="zh-Hans">简体中文</option>
+          </select>
         </div>
         <button id="appearance" class="appearance" type="button" aria-label="Dark mode" aria-pressed="false">
-          <span aria-hidden="true" class="mode-icon"></span><span data-copy="dark">Dark mode</span>
+          <span aria-hidden="true" class="mode-icon"></span><span class="appearance-label" data-copy="dark">Dark mode</span>
         </button>
       </div>
     </div>
@@ -44,8 +45,8 @@
       <h1 id="name">Trong Cuong Tran</h1>
       <p class="degree" data-copy="degree">Bachelor of Advanced Computing</p>
       <p class="profile-detail"><a href="https://www.sydney.edu.au/" data-copy="university">The University of Sydney</a><br><span data-copy="location">Sydney, Australia</span></p>
-      <a class="cv-button" href="./assets/Trong_Cuong_Tran_CV.pdf" download data-copy="cv">Download CV</a>
       <div class="profile-links" aria-label="Contact and profiles" data-label="profiles" role="group">
+        <a class="cv-link" href="./assets/Trong_Cuong_Tran_CV.pdf" download aria-label="Download CV" data-label="cvDownload" data-copy="cv">CV</a>
         <a href="mailto:ttra0551@uni.sydney.edu.au" data-copy="email">Email</a>
         <a href="https://github.com/cuongisme04">GitHub</a>
         <a href="https://au.linkedin.com/in/trong-cuong-tran-b9b088248">LinkedIn</a>
