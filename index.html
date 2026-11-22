@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trong Cuong Tran studies computer vision, vision–language models and model evaluation at the University of Sydney.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Trong Cuong Tran | Academic Portfolio</title>
+  <script>
+    try {
+      if (localStorage.getItem('academic-theme') === 'dark') document.documentElement.dataset.theme = 'dark';
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="./assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-copy="skip">Skip to content</a>
+  <header class="topbar">
+    <div class="top-inner">
+      <a class="wordmark" href="./">Trong Cuong Tran</a>
+      <nav class="main-nav" aria-label="Main navigation" data-label="nav">
+        <a href="#research" data-copy="research">Research</a>
+        <a href="#projects" data-copy="projects">Projects</a>
+        <a href="#education" data-copy="educationNav">Education</a>
+      </nav>
+      <div class="preferences">
+        <div class="language" role="group" aria-label="Language" data-label="language">
+          <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <button type="button" data-lang="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="false">VI</button>
+          <button type="button" data-lang="zh-Hans" lang="zh-Hans" aria-label="简体中文" aria-pressed="false">中文</button>
+        </div>
+        <button id="appearance" class="appearance" type="button" aria-label="Dark mode" aria-pressed="false">
+          <span aria-hidden="true" class="mode-icon"></span><span data-copy="dark">Dark mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <aside class="profile" aria-labelledby="name">
+      <div class="monogram" aria-hidden="true">CT</div>
+      <h1 id="name">Trong Cuong Tran</h1>
+      <p class="degree" data-copy="degree">Bachelor of Advanced Computing</p>
+      <p class="profile-detail"><a href="https://www.sydney.edu.au/" data-copy="university">The University of Sydney</a><br><span data-copy="location">Sydney, Australia</span></p>
+      <a class="cv-button" href="./assets/Trong_Cuong_Tran_CV.pdf" download data-copy="cv">Download CV</a>
+      <div class="profile-links" aria-label="Contact and profiles" data-label="profiles" role="group">
+        <a href="mailto:ttra0551@uni.sydney.edu.au" data-copy="email">Email</a>
+        <a href="https://github.com/cuongisme04">GitHub</a>
+        <a href="https://au.linkedin.com/in/trong-cuong-tran-b9b088248">LinkedIn</a>
+        <a href="https://orcid.org/0009-0002-0106-3479">ORCID</a>
+      </div>
+    </aside>
+
+    <main id="main">
+      <section aria-labelledby="about-heading">
+        <h2 id="about-heading" data-copy="about">About</h2>
+        <p class="lead" data-copy="bio">I’m completing a Bachelor of Advanced Computing at the University of Sydney, specialising in computational data science. My research focuses on how vision–language models perform under different evaluation conditions and how language guidance affects visual recognition.</p>
+        <p class="quiet" data-copy="interest">I’m interested in computer vision, multimodal learning and model evaluation, and I’m open to related research directions.</p>
+      </section>
+
+      <section id="research" aria-labelledby="research-heading">
+        <h2 id="research-heading" data-copy="research">Research</h2>
+        <article class="publication" aria-labelledby="dicta-title">
+          <p class="status" data-copy="dictaStatus">DICTA 2026 · Accepted conference paper</p>
+          <h3 id="dicta-title" data-copy="dictaTitle">Testing Checkpoint–Resolution Alignment in Frozen Dual-Embedding Vision–Language Checkpoints: Accuracy and Recorded-Protocol Costs</h3>
+          <p class="meta" data-copy="author">Trong Cuong Tran · Sole author</p>
+          <p data-copy="dictaBody">I benchmarked frozen vision–language models on image classification and text–image retrieval. Increasing resolution did not consistently improve performance. The tested resolution closest to the checkpoint reference performed best in 10 of 13 task sweeps.</p>
+          <a class="paper-link" href="https://github.com/cuongisme04/checkpoint-resolution-alignment" data-copy="code">Code and results</a>
+        </article>
+        <article class="publication" aria-labelledby="thesis-title">
+          <p class="status" data-copy="thesisStatus">Honours thesis · The University of Sydney</p>
+          <h3 id="thesis-title" data-copy="thesisTitle">Do Language Semantics Actually Drive Vision–Language Gains in Semi-Supervised Domain-Adaptive Segmentation?</h3>
+          <p class="meta" data-copy="supervisors">Supervised by Dr Ravihansa Rajapakse and Dr Ali Anaissi</p>
+          <p data-copy="thesisBody">I tested whether correctly matched language guidance helps semantic segmentation when adapting between domains with few labelled target images. In the conditions I evaluated, correct text guidance did not show a consistent benefit.</p>
+        </article>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" data-copy="projects">Projects</h2>
+        <ul class="projects">
+          <li><a href="https://github.com/idolbinhminhtran/DATA1002" data-copy="premierTitle">Premier League Match Outcome Analysis</a><span data-copy="premierBody">Team project using ClubElo data and random forest classification to study match outcomes.</span></li>
+          <li><a href="https://github.com/emilyl523/OPTIVER11" data-copy="echoTitle">EchoVol20 Volatility Prediction App</a><span data-copy="echoBody">Team capstone on volatility prediction. I contributed to model evaluation and the Streamlit interface.</span></li>
+        </ul>
+      </section>
+
+      <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading" data-copy="education">Education &amp; awards</h2>
+        <dl class="records">
+          <div><dt>2023–2026</dt><dd><strong data-copy="degree">Bachelor of Advanced Computing</strong><span data-copy="major">Computational Data Science · The University of Sydney</span><span data-copy="dateDegree">Expected completion December 2026</span></dd></div>
+          <div><dt>2023</dt><dd><strong data-copy="scholarship">Vice Chancellor’s International Scholarship</strong><span data-copy="university">The University of Sydney</span></dd></div>
+        </dl>
+      </section>
+
+      <footer><span>Trong Cuong Tran</span><a href="mailto:ttra0551@uni.sydney.edu.au" data-copy="contact">Get in touch</a></footer>
+    </main>
+  </div>
+</body>
+</html>

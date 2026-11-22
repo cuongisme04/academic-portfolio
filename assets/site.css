@@ -1,0 +1,111 @@
+/* Adapts Minimal Light's profile-and-content layout. Upstream credit in README. */
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --text: #212b37;
+  --muted: #526174;
+  --heading: #172e49;
+  --accent: #234e7d;
+  --line: #dce4ed;
+  --wash: #eef3f8;
+  --button: #203d5f;
+  --button-text: #fff;
+  --serif: Georgia, 'Times New Roman', 'Songti SC', 'Noto Serif CJK SC', serif;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #151b24;
+  --text: #e2eaf3;
+  --muted: #afbdd0;
+  --heading: #edf4fd;
+  --accent: #a9ccf5;
+  --line: #374557;
+  --wash: #243244;
+  --button: #b9d6f6;
+  --button-text: #152940;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 1rem/1.65 var(--sans); }
+a { color: var(--accent); text-underline-offset: .22em; }
+a:hover { text-decoration-thickness: .13em; }
+button { font: inherit; color: inherit; cursor: pointer; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+[hidden] { display: none !important; }
+.skip { position: fixed; inset: .5rem auto auto .75rem; z-index: 10; background: var(--bg); padding: .4rem .65rem; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+
+.topbar { border-bottom: 1px solid var(--line); }
+.top-inner, .wrapper { max-width: 73rem; padding-inline: 2.5rem; margin-inline: auto; }
+.top-inner { display: flex; align-items: center; gap: 2rem; min-height: 4.4rem; }
+.wordmark { font-family: var(--serif); font-size: 1.16rem; color: var(--heading); text-decoration: none; white-space: nowrap; }
+.main-nav, .preferences { display: flex; align-items: center; gap: 1.25rem; }
+.main-nav { margin-inline-start: auto; }
+.main-nav a { font-size: .875rem; color: var(--muted); text-decoration: none; }
+.main-nav a:hover { text-decoration: underline; }
+.preferences { gap: .55rem; }
+.language { display: flex; align-items: center; padding: .15rem; border: 1px solid var(--line); border-radius: .45rem; }
+.language button { background: transparent; border: 0; border-radius: .3rem; min-width: 2.25rem; min-height: 2rem; color: var(--muted); font-size: .875rem; font-weight: 550; }
+.language button[aria-pressed="true"], .language button:hover { background: var(--wash); color: var(--accent); }
+.appearance { display: inline-flex; gap: .45rem; align-items: center; min-height: 2.42rem; padding: .3rem .65rem; color: var(--heading); background: transparent; border: 1px solid var(--line); border-radius: .45rem; font-size: .875rem; white-space: nowrap; }
+.appearance:hover { background: var(--wash); }
+.mode-icon { font-size: 1.12rem; line-height: 1; }
+.mode-icon::before { content: "☾"; }
+[data-theme="dark"] .mode-icon::before { content: "☼"; }
+
+.wrapper { display: grid; grid-template-columns: minmax(13rem, 16rem) minmax(0, 1fr); gap: clamp(3rem, 7vw, 6rem); padding-block: clamp(2.5rem, 6vw, 5rem) 2rem; }
+.profile { align-self: start; position: sticky; top: 2rem; }
+.monogram { display: grid; place-items: center; width: 5.6rem; height: 5.6rem; background: var(--wash); color: var(--heading); border-radius: 50%; border: 1px solid var(--line); font: 2rem var(--serif); margin-bottom: 1.45rem; }
+h1, h2, h3 { color: var(--heading); font-family: var(--serif); font-weight: 500; }
+h1 { font-size: clamp(2.15rem, 3.4vw, 3.5rem); line-height: 1.06; letter-spacing: -.045em; margin: 0 0 .75rem; max-width: 10ch; }
+.degree { font-size: 1rem; margin: 0 0 .24rem; }
+.profile-detail { margin: 0; color: var(--muted); font-size: .94rem; }
+.profile-detail a { text-decoration: none; }
+.profile-detail a:hover { text-decoration: underline; }
+.cv-button { display: inline-block; margin-top: 1.45rem; padding: .48rem .95rem; border: 1px solid var(--button); border-radius: .35rem; background: var(--button); color: var(--button-text); font-size: .9rem; font-weight: 650; text-decoration: none; }
+.cv-button:hover { text-decoration: underline; }
+.profile-links { display: flex; gap: .55rem .85rem; flex-wrap: wrap; margin-top: 1rem; font-size: .875rem; }
+.profile-links a { text-decoration: none; }
+.profile-links a:hover { text-decoration: underline; }
+
+main { min-width: 0; }
+main section { margin-bottom: 2.5rem; scroll-margin-top: 1.25rem; }
+h2 { margin: 0 0 1rem; font-size: clamp(1.65rem, 3vw, 2.05rem); line-height: 1.15; letter-spacing: -.025em; border-bottom: 1px solid var(--line); padding-bottom: .62rem; }
+h3 { margin: .28rem 0 .35rem; font-size: 1.24rem; line-height: 1.4; font-weight: 600; }
+p { margin: 0 0 .8rem; }
+.lead { font-size: 1.06rem; }
+.quiet, .meta, .projects span, .records dd span { color: var(--muted); }
+.publication + .publication { border-top: 1px solid var(--line); padding-top: 1.15rem; margin-top: 1.15rem; }
+.status { color: var(--accent); font-size: .875rem; font-weight: 650; margin-bottom: 0; }
+.meta { margin-bottom: .55rem; font-size: .925rem; }
+.paper-link { font-size: .9rem; font-weight: 600; }
+.projects { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; }
+.projects a { font-weight: 650; }
+.projects span, .records dd span { display: block; }
+.records { margin: 0; }
+.records div { display: grid; grid-template-columns: minmax(7.5rem, max-content) 1fr; gap: .8rem; margin-bottom: .85rem; }
+.records dt { color: var(--muted); font-size: .9rem; }
+.records dd { margin: 0; }
+footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: .6rem; padding-top: 1rem; color: var(--muted); font-size: .875rem; }
+@media (max-width: 56rem) {
+  .top-inner, .wrapper { padding-inline: 1.5rem; }
+  .top-inner { gap: 1rem; }
+  .main-nav { gap: .7rem; }
+  .wrapper { gap: 2rem; }
+}
+@media (max-width: 43rem) {
+  .top-inner { min-height: auto; flex-wrap: wrap; justify-content: space-between; padding-block: .6rem; gap: .4rem .75rem; }
+  .top-inner, .wrapper { padding-inline: 1rem; }
+  .main-nav { order: 1; flex-basis: 100%; margin: 0; gap: 1rem; flex-wrap: wrap; }
+  .wrapper { display: block; padding-top: 2.25rem; }
+  .profile { position: static; margin-bottom: 2.3rem; }
+  .monogram { width: 4.5rem; height: 4.5rem; margin-bottom: .8rem; }
+  h1 { max-width: none; }
+  .records div { grid-template-columns: 1fr; gap: .1rem; }
+}
+@media print {
+  .topbar, .skip, .cv-button { display: none; }
+  .wrapper { display: block; max-width: none; padding: 0; }
+  .profile { position: static; }
+  .publication { break-inside: avoid; }
+}
