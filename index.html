@@ -20,7 +20,7 @@
     <div class="top-inner">
       <a class="wordmark" href="./">Trong Cuong Tran</a>
       <nav class="main-nav" aria-label="Main navigation" data-label="nav">
-        <a href="#research" data-copy="research">Research</a>
+        <a href="#publications" data-copy="publications">Publications</a>
         <a href="#projects" data-copy="projects">Projects</a>
         <a href="#education" data-copy="educationNav">Education</a>
       </nav>
@@ -59,21 +59,19 @@
         <p class="quiet" data-copy="interest">I’m interested in computer vision, multimodal learning and model evaluation, and I’m open to related research directions.</p>
       </section>
 
-      <section id="research" aria-labelledby="research-heading">
-        <h2 id="research-heading" data-copy="research">Research</h2>
-        <article class="publication" aria-labelledby="dicta-title">
-          <p class="status" data-copy="dictaStatus">DICTA 2026 · Accepted conference paper</p>
-          <h3 id="dicta-title" data-copy="dictaTitle">Testing Checkpoint–Resolution Alignment in Frozen Dual-Embedding Vision–Language Checkpoints: Accuracy and Recorded-Protocol Costs</h3>
-          <p class="meta" data-copy="author">Trong Cuong Tran · Sole author</p>
-          <p data-copy="dictaBody">I benchmarked frozen vision–language models on image classification and text–image retrieval. Increasing resolution did not consistently improve performance. The tested resolution closest to the checkpoint reference performed best in 10 of 13 task sweeps.</p>
-          <a class="paper-link" href="https://github.com/cuongisme04/checkpoint-resolution-alignment" data-copy="code">Code and results</a>
-        </article>
-        <article class="publication" aria-labelledby="thesis-title">
-          <p class="status" data-copy="thesisStatus">Honours thesis · The University of Sydney</p>
-          <h3 id="thesis-title" data-copy="thesisTitle">Do Language Semantics Actually Drive Vision–Language Gains in Semi-Supervised Domain-Adaptive Segmentation?</h3>
-          <p class="meta" data-copy="supervisors">Supervised by Dr Ravihansa Rajapakse and Dr Ali Anaissi</p>
-          <p data-copy="thesisBody">I tested whether correctly matched language guidance helps semantic segmentation when adapting between domains with few labelled target images. In the conditions I evaluated, correct text guidance did not show a consistent benefit.</p>
-        </article>
+      <section id="publications" aria-labelledby="publications-heading">
+        <h2 id="publications-heading" data-copy="publications">Publications</h2>
+        <ul class="publication-list" role="list">
+          <li class="publication">
+            <h3 data-copy="dictaTitle">Testing Checkpoint–Resolution Alignment in Frozen Dual-Embedding Vision–Language Checkpoints: Accuracy and Recorded-Protocol Costs</h3>
+            <p class="publication-author"><strong>Trong Cuong Tran</strong></p>
+            <p class="publication-venue" data-copy="dictaVenue">International Conference on Digital Image Computing: Techniques and Applications (DICTA 2026)</p>
+            <div class="publication-links">
+              <a class="paper-link" href="https://github.com/cuongisme04/checkpoint-resolution-alignment" data-copy="code">Code and results</a>
+              <span class="publication-status" data-copy="dictaStatus">Accepted</span>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section id="projects" aria-labelledby="projects-heading">
@@ -88,6 +86,7 @@
         <h2 id="education-heading" data-copy="education">Education &amp; awards</h2>
         <dl class="records">
           <div><dt>2023–2026</dt><dd><strong data-copy="degree">Bachelor of Advanced Computing</strong><span data-copy="major">Computational Data Science · The University of Sydney</span><span data-copy="dateDegree">Expected completion December 2026</span></dd></div>
+          <div><dt>2026</dt><dd><strong data-copy="thesisStatus">Honours thesis</strong><span data-copy="thesisTitle">Do Language Semantics Actually Drive Vision–Language Gains in Semi-Supervised Domain-Adaptive Segmentation?</span><span data-copy="supervisors">Supervised by Dr Ravihansa Rajapakse and Dr Ali Anaissi</span></dd></div>
           <div><dt>2023</dt><dd><strong data-copy="scholarship">Vice Chancellor’s International Scholarship</strong><span data-copy="university">The University of Sydney</span></dd></div>
         </dl>
       </section>

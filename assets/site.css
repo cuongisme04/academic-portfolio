@@ -74,11 +74,15 @@ h2 { margin: 0 0 1rem; font-size: clamp(1.65rem, 3vw, 2.05rem); line-height: 1.1
 h3 { margin: .28rem 0 .35rem; font-size: 1.24rem; line-height: 1.4; font-weight: 600; }
 p { margin: 0 0 .8rem; }
 .lead { font-size: 1.06rem; }
-.quiet, .meta, .projects span, .records dd span { color: var(--muted); }
+.quiet, .publication-venue, .projects span, .records dd span { color: var(--muted); }
+.publication-list { list-style: none; margin: 0; padding: 0; }
 .publication + .publication { border-top: 1px solid var(--line); padding-top: 1.15rem; margin-top: 1.15rem; }
-.status { color: var(--accent); font-size: .875rem; font-weight: 650; margin-bottom: 0; }
-.meta { margin-bottom: .55rem; font-size: .925rem; }
-.paper-link { font-size: .9rem; font-weight: 600; }
+.publication-author, .publication-venue { margin-bottom: .22rem; font-size: .94rem; }
+.publication-venue { font-style: italic; }
+.publication-links { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem .8rem; margin-top: .6rem; }
+.paper-link { border: 1px solid var(--line); border-radius: .3rem; padding: .15rem .5rem; font-size: .875rem; font-weight: 600; text-decoration: none; }
+.paper-link:hover { background: var(--wash); text-decoration: underline; }
+.publication-status { color: var(--muted); font-size: .875rem; }
 .projects { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; }
 .projects a { font-weight: 650; }
 .projects span, .records dd span { display: block; }
